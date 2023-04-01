@@ -1,0 +1,10 @@
+requests
+pytz
+Flask
+gunicorn
+lxml
+joblib
+gevent
+geoip2
+flask-cors
+numpy
