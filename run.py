@@ -145,10 +145,10 @@ def libseat():
     mancount = count_pv(dt, hm, False)
     if len(av_seat_list) == 0:
         av_seat_list = [{'area_name': '---', 'available_num': '---'}]
-    if len(un_seat_list) == 0:
-        un_seat_list = [{'area_name': '---', 'available_num': '---'}]
+#     if len(un_seat_list) == 0:
+#         un_seat_list = [{'area_name': '---', 'available_num': '---'}]
 
-    res = jsonify({'status': 'success', 'av_seats': av_seat_list, 'un_seats': un_seat_list, 'dt': dt, 'hm': hm,
+    res = jsonify({'status': 'success', 'av_seats': av_seat_list, 'dt': dt, 'hm': hm,
                    'visitcount': mancount, 'hint': '查询成功'})
     return res, 200, {"Content-Type": "application/json"}
 
