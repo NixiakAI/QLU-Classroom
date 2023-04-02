@@ -24,7 +24,8 @@ def get_table():
     url3 = 'http://jwxt-qlu-edu-cn.vpn.qlu.edu.cn:8118/jsxsd/kbcx/kbxx_classroom_ifr'
     #使用的提交头
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4412.0 Safari/537.36 Edg/90.0.796.0','Cookie': Cookie}
-    data = {'xnxqh': '2022-2023-2','skyx': ''}
+    #xqid就是校区，1就是长清，彩石这里是zc，历城这里是3，菏泽是4，上合是NH这个上合可能说的是海洋，就青岛那个
+    data = {'xnxqh': '2022-2023-2','skyx': '','xqid': '1'}
     #将获取到的数据存在course
     course = requests.post(url1, headers=headers, data=data)
     html = etree.HTML(course.text)
